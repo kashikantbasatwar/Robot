@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-05-22T11:26:58.605857" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="/home/kashikant/PycharmProjects/py1/venv/login/testscenarios/login_tests.robot">
+<test id="s1-t1" name="Validate successful Login" line="7">
+<kw name="Open the Browser with URL" owner="keywords">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-22T11:26:58.802824" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<arg>/home/kashikant/PycharmProjects/py1/venv/login/Drivers/${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-22T11:26:58.802343" elapsed="3.911010"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-22T11:27:02.714450" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${base_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-22T11:27:02.713963" elapsed="1.781920"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-22T11:27:04.496609" elapsed="0.107031"/>
+</kw>
+<status status="PASS" start="2024-05-22T11:26:58.801396" elapsed="5.802606"/>
+</kw>
+<kw name="Fill the login form" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-22T11:27:04.607398" level="INFO">Typing text 'standard_user' into text field '//*[@id="user-name"]'.</msg>
+<arg>${username_text}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-22T11:27:04.606178" elapsed="0.178197"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-22T11:27:04.785286" level="INFO">Typing text 'secret_sauce' into text field '//*[@id="password"]'.</msg>
+<arg>${password_text}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-22T11:27:04.784815" elapsed="0.084781"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-22T11:27:04.870591" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-22T11:27:04.870068" elapsed="0.087661"/>
+</kw>
+<arg>${valid_username}</arg>
+<arg>${valid_password}</arg>
+<status status="PASS" start="2024-05-22T11:27:04.604943" elapsed="0.353085"/>
+</kw>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2024-05-22T11:26:58.800550" elapsed="6.157984"/>
+</test>
+<status status="PASS" start="2024-05-22T11:26:58.607086" elapsed="6.352476"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">REGRESSION</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Tests">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
